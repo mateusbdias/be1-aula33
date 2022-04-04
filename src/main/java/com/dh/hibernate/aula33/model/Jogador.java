@@ -13,7 +13,7 @@ public class Jogador {
     private String posicao;
     private Double peso;
     private Double altura;
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "time_id")
     private Time time;
 
